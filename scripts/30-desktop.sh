@@ -1,0 +1,1 @@
+apt-get install -y ubuntu-gnome-desktop virtualbox-guest-utils virtualbox-guest-x11
