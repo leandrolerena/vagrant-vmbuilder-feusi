@@ -1,4 +1,4 @@
-.PHONY : build clean package ova cleanbuildova
+.PHONY : build clean package ova cleanbuildova sign sign_check
 
 build: 
 	GUI=0 vagrant up
@@ -17,3 +17,9 @@ ova:
 	mkdir out || true
 	vboxmanage export ubuntu-feusi -o out/ubuntu-feusi.ova
 cleanbuildova: clean build package ova
+sign:
+	(cd out/ && sha256sum ubuntu-feusi.ova > sha256sums.txt && gpg -s --detach-sign sha256sums.txt)
+
+sign_check: 
+	(cd out/ && gpg --verify sha256sums.txt.sig sha256sums.txt)
+
