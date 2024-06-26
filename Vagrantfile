@@ -73,6 +73,11 @@ Vagrant.configure("2") do |config|
     
     vb.customize ["modifyvm", :id, "--vram", "128"]
 
+
+    # Disable the serial port causing issues on windows machines
+    vb.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
+    
+  
   end
   #
   # View the documentation for the provider you are using for more
