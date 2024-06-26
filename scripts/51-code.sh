@@ -7,3 +7,7 @@ apt-get install -y  code
 runuser feusi -c "code --install-extension ms-python.python"
 runuser feusi -c "code --install-extension ms-toolsai.jupyter"
 runuser feusi -c "code --install-extension ms-python.vscode-pylance"
+runuser feusi -c "code --install-extension mtxr.sqltools"
+runuser feusi -c "code --install-extension mtxr.sqltools-driver-mysql"
+
+# Oracle.mysql-shell-for-vs-code
