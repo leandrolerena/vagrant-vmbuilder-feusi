@@ -4,11 +4,10 @@ add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vsc
 apt-get install -y  code
 
 
-runuser feusi -c "code --install-extension ms-python.python"
-runuser feusi -c "code --install-extension ms-toolsai.jupyter"
-runuser feusi -c "code --install-extension ms-python.vscode-pylance"
-runuser feusi -c "code --install-extension mtxr.sqltools"
-runuser feusi -c "code --install-extension mtxr.sqltools-driver-mysql"
-runuser feusi -c "code --install-extension humao.rest-client"
-
-# Oracle.mysql-shell-for-vs-code
+su feusi -c "code --install-extension ms-python.python"
+su feusi -c "code --install-extension ms-toolsai.jupyter"
+su feusi -c "code --install-extension ms-python.vscode-pylance"
+su feusi -c "code --install-extension mtxr.sqltools"
+su feusi -c "code --install-extension mtxr.sqltools-driver-mysql"
+su feusi -c "code --install-extension humao.rest-client"
+su feusi -c "code --install-extension ms-azuretools.vscode-docker"
