@@ -9,5 +9,6 @@ runuser feusi -c "code --install-extension ms-toolsai.jupyter"
 runuser feusi -c "code --install-extension ms-python.vscode-pylance"
 runuser feusi -c "code --install-extension mtxr.sqltools"
 runuser feusi -c "code --install-extension mtxr.sqltools-driver-mysql"
+runuser feusi -c "code --install-extension humao.rest-client"
 
 # Oracle.mysql-shell-for-vs-code
