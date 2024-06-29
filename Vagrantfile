@@ -87,7 +87,7 @@ Vagrant.configure("2") do |config|
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    find /vagrant/scripts -name "*.sh" | sort | while read script; do echo $script && /bin/sh $script || echo "$script failed"; done
+    find /vagrant/scripts -name "*.sh" | sort | while read script; do echo $script && /bin/sh $script; done
   SHELL
 
   config.vm.provision 'shell', reboot: true
